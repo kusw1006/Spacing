@@ -152,3 +152,7 @@ Str:
 * 간단한 토이 프로젝트 용도인 모델입니다.
 * 실제로 사용하고 싶고, 중간에 공백을 추가하고 싶지 않은 단어가 있다면 직접 decode 함수를 작성할 수 있습니다. 기본적인 decode 함수는 [`run_sentences.py#L54`](https://github.com/jeongukjae/korean-spacing-model/blob/master/run_sentences.py#L54)를 참고하세요.
 * 나무위키 텍스트에서 학습을 시킨 결과 어느정도 정제된 말투에서는 띄어쓰기를 잘 해내는 경향을 보입니다. 실제로 테스트를 해보진 않았지만 구어체에서도 사용가능할 것으로 보입니다.
+
+
+* corpus의 경우 용량이 커서 김한비의 onedrive에 저장.
+* 나중에 다시 학습시키려면 이 폴더에 corpus를 배치.
