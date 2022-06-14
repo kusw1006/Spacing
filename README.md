@@ -7,7 +7,7 @@
 
 `config.json`의 설정에 따라 다르지만 아래와 같은 구조를 가집니다.
 
-![model](./model.png)
+![model](./korean-spacing-model/model.png)
 
 Embedding을 거치고 난 뒤 여러개의 Conv1D - MaxPool1D 결과물을 Concat한 후 Dense Layer를 2개 거칩니다. input은 `(BatchSize, SequenceLength)`의 int32 형태의 tensor이며, output은 `(BatchSize, SequenceLength, 3)`의 tensor입니다. argmax 후 decode과정을 거치며, 0은 문자 유지, 1은 공백 문자 추가, 2는 현재 문자가 공백일 경우 공백 삭제의 의미를 지닙니다.
 
@@ -147,10 +147,4 @@ Str:
 위와 같은 식으로 interactive하게 문장을 테스트해보는 스크립트입니다.
 
 ## ---
-
-* 간단한 토이 프로젝트 용도인 모델입니다.
-* 실제로 사용하고 싶고, 중간에 공백을 추가하고 싶지 않은 단어가 있다면 직접 decode 함수를 작성할 수 있습니다. 기본적인 decode 함수는 [`run_sentences.py#L54`](https://github.com/jeongukjae/korean-spacing-model/blob/master/run_sentences.py#L54)를 참고하세요.
-* 나무위키 텍스트에서 학습을 시킨 결과 어느정도 정제된 말투에서는 띄어쓰기를 잘 해내는 경향을 보입니다. 실제로 테스트를 해보진 않았지만 구어체에서도 사용가능할 것으로 보입니다.
-
-
 
